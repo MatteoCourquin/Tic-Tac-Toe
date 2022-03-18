@@ -22,7 +22,8 @@
             <h1>Tic Tac Toe</h1>
             <p class='counter'>{{ counter }}</p>
 
-            <p class="winner">{{ winner }}</p>
+            <p v-if="winner !== '-'" class="winner">{{ winner }}</p>
+            <p v-else-if="counter === 9" class="winner">Match Nul</p>
 
             <div class="tic-tac-toe-container">
 
@@ -32,6 +33,8 @@
             </div>
 
             <p v-if="winner !== '-'" class="end-game">Partie terminée</p>
+
+            <button v-if="winner !== '-' || counter === 9"><a href="javascript:location.reload(true)">Restart</a></button>
 
         </div>
 

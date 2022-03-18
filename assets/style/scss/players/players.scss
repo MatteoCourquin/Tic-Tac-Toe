@@ -12,7 +12,7 @@
     backdrop-filter: blur( 3.5px );
     -webkit-backdrop-filter: blur( 3.5px );
     border-radius: 10px;
-    border: 1px solid #ffffff;
+    border: 1px solid var(--color-white);
     transition: .3s;
 }
 
