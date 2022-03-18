@@ -1,0 +1,29 @@
+
+.tic-tac-toe-container{
+    display: grid;
+    grid-template-columns: repeat(3, 50px);
+    grid-template-rows: repeat(3, 50px);
+    gap: 10px;
+    width: fit-content;
+    height: fit-content;
+}
+.tic-tac-toe-case{
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 3.5px );
+    -webkit-backdrop-filter: blur( 3.5px );
+    border-radius: 10px;
+    border: 1px solid #ffffff;
+    transition: .3s;
+}
+
+.unchecked{
+    background: var(--color-unchecked);
+}
+.checkedPlayer1{
+    background: var(--color-checked-player-1);
+    border-radius: 50%;
+}
+.checkedPlayer2{
+    background: var(--color-checked-player-2);
+    transform: rotate(45deg) scale(0.8);
+}

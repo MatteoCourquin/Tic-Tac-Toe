@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang='fr'>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        
+        <!-- FAVICON -->
+        <link rel='icon' href='./favicon.png' type='image/png'>
+
+        <!-- FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap" rel="stylesheet">
+        
+        <!-- STYLE -->
+        <link rel='stylesheet' href='./assets/style/css/main.css'>
+        <title>Tic Tac Toe</title>
+    </head>
+    <body>
+
+        <div id="app">
+            <h1>Tic Tac Toe</h1>
+            <p class='counter'>{{ counter }}</p>
+
+            <p class="winner">{{ winner }}</p>
+
+            <div class="tic-tac-toe-container">
+
+                <!-- Generate 9 case -->
+                <div v-for="i in 9" class="tic-tac-toe-case unchecked" :ref="'refCase' + i" @click.once="getId" ></div>
+                
+            </div>
+
+            <p v-if="winner !== '-'" class="end-game">Partie terminée</p>
+
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <script src='./assets/script/script.js'></script>
+    </body>
+</html>

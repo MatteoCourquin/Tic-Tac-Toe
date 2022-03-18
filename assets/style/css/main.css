@@ -1,0 +1,102 @@
+:root {
+  --color-black: #333;
+  --color-white: #fff;
+  --color-blue: #5095e4;
+  --color-purple: #b091e5;
+  --color-checked-player-1: #0067dc;
+  --color-checked-player-2: #6c2bde;
+  --color-unchecked: #8282820d;
+  --font-roboto: "Roboto", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: radial-gradient(#5095e4, #b091e5);
+}
+
+.tic-tac-toe-container {
+  display: grid;
+  grid-template-columns: repeat(3, 50px);
+  grid-template-rows: repeat(3, 50px);
+  gap: 10px;
+  width: fit-content;
+  height: fit-content;
+}
+
+.tic-tac-toe-case {
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3.5px);
+  -webkit-backdrop-filter: blur(3.5px);
+  border-radius: 10px;
+  border: 1px solid #ffffff;
+  transition: 0.3s;
+}
+
+.unchecked {
+  background: var(--color-unchecked);
+}
+
+.checkedPlayer1 {
+  background: var(--color-checked-player-1);
+  border-radius: 50%;
+}
+
+.checkedPlayer2 {
+  background: var(--color-checked-player-2);
+  transform: rotate(45deg) scale(0.8);
+}
+
+h1 {
+  color: var(--color-white);
+  font-family: var(--font-roboto);
+  font-weight: bolder;
+  text-align: center;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 60px;
+}
+
+.counter {
+  position: absolute;
+  color: var(--color-white);
+  top: 10px;
+  right: 10px;
+  font-family: var(--font-roboto);
+  font-size: 60px;
+  font-weight: bolder;
+}
+
+.winner {
+  color: var(--color-white);
+  font-family: var(--font-roboto);
+  font-size: 30px;
+  font-weight: bolder;
+  text-align: center;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.end-game {
+  color: var(--color-white);
+  font-family: var(--font-roboto);
+  font-size: 30px;
+  font-weight: bolder;
+  text-align: center;
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/*# sourceMappingURL=main.css.map */

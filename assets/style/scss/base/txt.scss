@@ -1,0 +1,41 @@
+h1{
+    color: var(--color-white);
+    font-family: var(--font-roboto);
+    font-weight: bolder;
+    text-align: center;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 60px;
+}
+.counter{
+    position: absolute;
+    color: var(--color-white);
+    top: 10px;
+    right: 10px;
+    font-family: var(--font-roboto);
+    font-size: 60px;
+    font-weight: bolder;
+}
+.winner{
+    color: var(--color-white);
+    font-family: var(--font-roboto);
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.end-game{
+    color: var(--color-white);
+    font-family: var(--font-roboto);
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+}

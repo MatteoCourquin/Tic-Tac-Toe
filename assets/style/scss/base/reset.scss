@@ -1,0 +1,25 @@
+:root{
+    // Color
+    --color-black: #333;
+    --color-white: #fff;
+    --color-blue: #5095e4;
+    --color-purple: #b091e5;
+    --color-checked-player-1: #0067dc;
+    --color-checked-player-2: #6c2bde;
+    --color-unchecked: #8282820d;
+
+    // Fonts
+    --font-roboto: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+#app{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: radial-gradient(#5095e4, #b091e5);
+}
