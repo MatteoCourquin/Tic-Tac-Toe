@@ -23,7 +23,7 @@
             <p class='counter'>{{ counter }}</p>
 
             <p v-if="winner !== '-'" class="winner">{{ winner }}</p>
-            <p v-else-if="counter === 9" class="winner">Match Nul</p>
+            <p v-else-if="counter === 9" class="winner">Draw</p>
 
             <div class="tic-tac-toe-container">
 
@@ -32,9 +32,20 @@
                 
             </div>
 
-            <p v-if="winner !== '-'" class="end-game">Partie terminée</p>
+            <template v-if="winner !== '-' || counter === 9">
+                <p class="end-game">End Game</p>
+                <button><a href="javascript:location.reload(true)">Restart</a></button>
+            </template>
 
-            <button v-if="winner !== '-' || counter === 9"><a href="javascript:location.reload(true)">Restart</a></button>
+
+            <div class="player">
+                <div>
+                    <div class="color-player"></div><span>Player 1</span>
+                </div>
+                <div>
+                    <div class="color-player"></div><span>Player 2</span>
+                </div>
+            </div>
 
         </div>
 
