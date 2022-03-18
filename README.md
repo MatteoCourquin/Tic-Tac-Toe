@@ -36,3 +36,4 @@ mais, coder en VueJS :
   @click.once
 ```
 
+Link to project : https://tic-tac-toe-iota-one.vercel.app/
