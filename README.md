@@ -36,5 +36,5 @@ mais, coder en VueJS :
   @click.once
 ```
 
-Lien du projet : https://tic-tac-toe-iota-one.vercel.app/
+Lien du projet : https://tic-tac-toe-iota-one.vercel.app/ <br>
 Lien de la présentation : https://docs.google.com/presentation/d/1KCNjjuZXGOyZUNcbcVbfEdAN0-RmEBM5CmlUh2G61TQ/edit#slide=id.g1f87997393_0_782 
