@@ -3,8 +3,8 @@
   --color-white: #fff;
   --color-blue: #5095e4;
   --color-purple: #b091e5;
-  --color-checked-player-1: #0067dc;
-  --color-checked-player-2: #6c2bde;
+  --color-checked-player-1: #5095e4;
+  --color-checked-player-2: #b091e5;
   --color-unchecked: #8282820d;
   --font-roboto: "Roboto", sans-serif;
 }
@@ -134,7 +134,7 @@ button {
   padding: 10px 20px;
   border: 1px solid var(--color-white);
   border-radius: 10px;
-  background: linear-gradient(90deg, #5095e4, #6c2bde);
+  background: linear-gradient(90deg, var(--color-blue), var(--color-purple));
 }
 button a {
   color: white;

@@ -6,7 +6,7 @@ button{
     padding: 10px 20px;
     border: 1px solid var(--color-white);
     border-radius: 10px;
-    background: linear-gradient(90deg, #5095e4, #6c2bde);
+    background: linear-gradient(90deg, var(--color-blue), var(--color-purple));
     a{
         color: white;
         font-family: var(--font-roboto);
