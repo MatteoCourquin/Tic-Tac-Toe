@@ -1,55 +1,68 @@
 <!DOCTYPE html>
-<html lang='fr'>
+<html lang="fr">
     <head>
-        <meta charset='UTF-8'>
-        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-        
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
         <!-- FAVICON -->
-        <link rel='icon' href='./assets/images/favicon.png' type='image/png'>
+        <link rel="icon" href="./assets/images/favicon.png" type="image/png" />
 
         <!-- FONTS -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap" rel="stylesheet">
-        
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap"
+            rel="stylesheet"
+        />
+
         <!-- STYLE -->
-        <link rel='stylesheet' href='./assets/style/css/main.css'>
+        <link rel="stylesheet" href="./assets/style/css/main.css" />
         <title>Tic Tac Toe</title>
     </head>
     <body>
 
+        <!-- Div project's App -->
         <div id="app">
-            <h1>Tic Tac Toe</h1>
-            <p class='counter'>{{ counter }}</p>
 
+            <h1>Tic Tac Toe</h1>
+            <p class="counter">{{ counter }}</p>
+
+            <!-- display winner or equallity-->
             <p v-if="winner !== '-'" class="winner">{{ winner }}</p>
-            <p v-else-if="counter === 9" class="winner">Draw</p>
+            <p v-else-if="counter === 9" class="winner">Equallity</p>
 
             <div class="tic-tac-toe-container">
-
                 <!-- Generate 9 case -->
-                <div v-for="i in 9" class="tic-tac-toe-case unchecked" :ref="'refCase' + i" @click.once="getId" ></div>
-                
+                <div
+                    v-for="i in 9"
+                    class="tic-tac-toe-case unchecked"
+                    :ref="'refCase' + i"
+                    @click.once="getId"
+                ></div>
             </div>
 
+            <!-- Show template if game end -->
             <template v-if="winner !== '-' || counter === 9">
                 <p class="end-game">End Game</p>
-                <button><a href="javascript:location.reload(true)">Restart</a></button>
+                <button>
+                    <a href="javascript:location.reload(true)">Restart</a>
+                </button>
             </template>
 
-
+            <!-- Colors players -->
             <div class="player">
                 <div>
-                    <div class="color-player"></div><span>Player 1</span>
+                    <div class="color-player"></div>
+                    <span>Player 1</span>
                 </div>
                 <div>
-                    <div class="color-player"></div><span>Player 2</span>
+                    <div class="color-player"></div>
+                    <span>Player 2</span>
                 </div>
             </div>
-
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-        <script src='./assets/script/script.js'></script>
+        <script src="./assets/script/script.js"></script>
     </body>
 </html>

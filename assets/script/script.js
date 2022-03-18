@@ -10,6 +10,7 @@ new Vue({
         getId(e) {
             this.counter++
 
+            // One of two, other time add a different color
             if (this.counter % 2 == 0) {
                 e.target.classList.add('checkedPlayer1')
             } else {
@@ -17,11 +18,12 @@ new Vue({
             }
             e.target.classList.remove('unchecked')
 
-            // console.log(e.target)
-
+            // Call function to verif
             this.verifWin(e)
         },
         verifWin() {
+
+            // Call case
             let case1 = this.$refs.refCase1[0].className[this.$refs.refCase1[0].className.length - 1]
             let case2 = this.$refs.refCase2[0].className[this.$refs.refCase2[0].className.length - 1]
             let case3 = this.$refs.refCase3[0].className[this.$refs.refCase3[0].className.length - 1]
@@ -32,6 +34,7 @@ new Vue({
             let case8 = this.$refs.refCase8[0].className[this.$refs.refCase8[0].className.length - 1]
             let case9 = this.$refs.refCase9[0].className[this.$refs.refCase9[0].className.length - 1]
 
+            // conditions who win
             if (case1 === case2 && case2 === case3 && case1 !== 'd') {
                 this.winner = `Winner : Player ${case1}`
             } else if (case4 === case5 && case5 === case6 && case4 !== 'd') {
